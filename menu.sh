@@ -1,54 +1,69 @@
-echo -e "\033[1;92m"
-echo "_ _ _ _  _ ____ ___ ____ ____ ___  ___  
-| | | |__| |__|  |  [__  |__| |__] |__] 
-|_|_| |  | |  |  |  ___] |  | |    |   "
-echo -e "\033[1;93m"
-echo "_  _ ____ _  _ _  _ 
-|\/| |___ |\ | |  | 
-|  | |___ | \| |__| "
-echo
-echo -e "\033[1;92m"
-echo "		Rooted package >>>"
-echo
-echo
-echo -e "\033[1;96m"
-echo "			[ 1 ] Whatsapp Clear Data"
-echo
-echo "			[ 2 ] Whatsapp All Chat delete"
-echo
-echo "			[ 3 ] Whatsapp Uninstall"
-echo
-echo "			[ 4 ] Whatsapp Stickers Delete"
-echo
-echo "			[ 5 ] Whatsapp Log Delete"
-echo
-echo "			[ 6 ] Copy Whatsapp Logs"
-echo
-echo "			[ 7 ] Copy Whatsapp Stickers"
-echo
-echo "			[ 8 ] Copy Whatsapp Avatars"
-echo
-echo "			[ 9 ] Whatsapp Avatars Delete"
-echo
-echo "			[ 10 ] Whatsapp Chat Backup"
-echo
-echo "			[ 11 ] Whatsapp Chat Restore"
-echo
-echo "			[ 12 ] Whatsapp setting Update"
-echo
-echo "			[ 13 ] Whatsapp Stickers Backup"
-echo
-echo "			[ 14 ] Whatsapp Stickers Restore"
-echo
-echo -e "\033[1;94m"
-echo "		Without Root >>>"
-echo
-echo
-echo "			[ 15 ] Whatsapp Anti-Ban Method in hindi"
-echo
-echo -e "\033[92m◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆ \033[1;96m16.Exit \033[1;92m◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆"
 
+cd $PREFIX/bin
+if [ -e Whatsapp ];then
+clear
+cd ~/Whatsapp-Settings
+printf "\033[96m Requirement installed\n\n"
+else
+clear
+printf "\033[93m [+] Requirement found\n\n"
+sleep 2
+printf "\033[96m [+] Installing Requirements\n\n"
+sleep 2
+printf "\033[91m [+] Now Updating....\n"
+sleep 1
+apt update
+apt upgrade
+clear
+printf "\033[92m [+] Installing figlet .......\n"
+sleep 1
+apt-get install figlet
+printf "\033[93m [+] Installing toilet.......\n"
+sleep 1
+apt-get install toilet
+clear
+printf "\033[94m [+] Installing tsu.....\n"
+sleep 1
+apt-get install tsu
+clear
+cd ~/Whatsapp-Settings
+printf "\033[95m [+] Installing Whatsapp command.....\n"
+cp -f Whatsapp $PREFIX/bin
+chmod 777 $PREFIX/bin/Whatsapp
+clear
+printf "\033[96m [√] Successfully setup\n\n Now u can use this command :- Whatsapp"
+read
+fi
+su -c cd /dev/block
+if [ -e bootdevice ];then
+clear
+echo -e "\033[96m Your phone  root"
+else
+clear
+printf "\033[91m [×] Your phone not root \n\n [*] First root your phone then use this !!! \n\n"
+fi
+lal="\e[91m"
+cd $HOME/Whatsapp-Settings
+echo -e "\033[1;92m"
+figlet Whatsapp | toilet -f term -F gay
+figlet Menu | toilet -f term -F gay
 
+echo
+printf "		$lal[ 1 ]\033[92m Whatsapp Clear Data\n"
+printf "		$lal[ 2 ]\033[92m Whatsapp All Chat delete\n"
+printf "		$lal[ 3 ]\033[92m Whatsapp Uninstall\n"
+printf "		$lal[ 4 ]\033[92m Whatsapp Stickers Delete\n"
+printf "		$lal[ 5 ]\033[92m Whatsapp Log Delete\n"
+printf "		$lal[ 6 ]\033[92m Copy Whatsapp Logs\n"
+printf "		$lal[ 7 ]\033[92m Copy Whatsapp Stickers\n"
+printf "		$lal[ 8 ]\033[92m Copy Whatsapp Avatars\n"
+printf "		$lal[ 9 ]\033[92m Whatsapp Avatars Delete\n"
+printf "		$lal[ 10 ]\033[92m Whatsapp Chat Backup\n"
+printf "		$lal[ 11 ]\033[92m Whatsapp Chat Restore\n"
+printf "		$lal[ 12 ]\033[92m Whatsapp setting Update\n"
+printf "		$lal[ 13 ]\033[92m Whatsapp Stickers Backup\n"
+printf "		$lal[ 14 ]\033[92m Whatsapp Stickers Restore\n"
+echo -e "   		$lal[ 15 ]\033[92m Exit"
 echo -e "\e[1;91m"
 read -p '	Whatsapp >>' opt
 echo -e "\e[1;93m"
@@ -161,7 +176,7 @@ if [ $opt -eq 12 ];then
 echo "please wait......"
 rm -Rf $HOME/Whatsapp-Settings
 cd $HOME
-git clone https://github.com/android-rooted/Whatsapp-Settings
+git clone https://github.com/rooted-cyber/Whatsapp-Settings
 cd Whatsapp-Settings
 bash set.sh
 fi
@@ -190,13 +205,8 @@ echo -e "\033[96m Successfull Restored Stickers"
 Whatsapp
 fi
 if [ $opt -eq 15 ];then
-clear
-echo -e "\033[1;96m"
-sleep 2
-echo -e "\033[1;96m"
-echo "WHATSAPP ANTI-BAN KE LIYE SABSE PHLE OFFICIAL WHATSAPP INSTALL KRO OR APNA NUMBER KHOLO USME USKE BAD TITANIUM BACKUP DOWNLOAD KRO FIR TITANIUM BACKUP SE WHATSAPP KA BACKUP LO FIR WHATSAPP UNINSTALL KR DO FIR KOI V MODDED WHATSAPP DOWNLOAD KRO LEKIN USKA PACKAGE NAME com.whatsapp HONA CHAHIYE WO INSTALL KRO FIR TITANIUM BACKUP SE RESTORE KRO OR USKE BAD TUMHARA WHATSAPP MODDED WHATSAPP ME KHUL JAYEGA LEKIN VERIFY OFFICIAL ME RHNE KE KARN WHATSAPP BAN NHI HOGA."
-fi
-if [ $opt -eq 16 ];then
-exit
-exit
+exit 0
+else
+echo "invalid"
+exit 0
 fi

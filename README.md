@@ -1,9 +1,13 @@
 # Whatsapp-Settings
-Installation:- apt update
-apt upgrade
-apt-get install tsu
-tsu
-git clone https://github.com/Android-Maruf/Whatsapp-Settings
-cd Whatsapp-Settings
-bash Whatsapp_menu.sh
-root needed
+# Installation:- 
+<pre> $ apt update
+ $ apt upgrade
+ $ apt-get install tsu
+ $ apt-get install git
+ $ git clone https://github.com/rooted-cyber/Whatsapp-Settings
+ $ cd Whatsapp-Settings
+ $ tsu
+ $ bash menu.sh</pre>
+
+#Note :
+<p>root needed<p>
